@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choppies Supermarket  |   Feedback & Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
      <!--NAVIGATION-->
@@ -18,10 +19,146 @@
         </ul>
     </nav>
     <!--Page banner-->
-    <header>
+    <header class="page-banner">
         <h1>Contact &amp; Feedback</h1>
         <p> We would love to hear from you</p>
     </header>
-    
+    <main>
+        <!--contact section-->
+        <section id="contact">
+         <!-- FEEDBACK FORM -->
+            <div id="form-area">
+                <h2>Send Us a Message</h2>
+                 <form action="#" method="post">
+         <!-- FULL NAME FIELD -->
+                    <div>
+                        <label for="fullName">Full Name *</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="e.g. Thero Gontlafetse"
+                            required
+                            minlength="2"
+                        >
+                    </div>
+                    <!-- EMAIL ADDRESS FIELD -->
+                    <div>
+                        <label for="emailAddress">Email Address *</label>
+                        <!--
+                            type="email" — HTML5 automatically checks
+                            that the input looks like an email address.
+                    -->
+                        <input
+                            type="email"
+                            id="emailAddress"
+                            name="emailAddress"
+                            placeholder="e.g. therogontlafetse@email.com"
+                            required
+                        >
+                    </div>
+            <!--Phone number field-->
+            <div>
+                <label for="phoneNumber">Phone Number*</label>
+                <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="+267 7X XXX XXX"
+                required
+                pattern="[+0-9\s\-]{7,15}"
+                >
+            <!--Subject dropdown-->
+            <div>
+                <label for="subject">Subject</label>
+                <!-- <Select> creates a drop down menu.
+                     Each option is an <option> tag.  
+                     value=""with disbaled selected means the first
+                     is a placeholder that cannot be subbmitted -->
+            <select id="subject" name="subject" required>
+                <option value=""disbaled selected> Select a subject</option>
+                <option value="product-enquiry">Product Enquiry </option>
+                <option value="store-feedback">Store Feedback</option>
+                <option value="complaint">Complaint</option>
+                <option value="compliment">Compliment</option>
+                <option value="general">General Enquiry</option>
+            </select>
+            </div>
+            <!--Message Field-->
+            <div>
+                <label for="message">Message*</label>
+                <!-- <texarea> is used for multi-linr text input.
+                    Unlike <input> it has a closing tag.
+                    row="5" sets the visbile height.
+                    minlength"10" means at least 10 characters rewuired-->
+            <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Type your message here...."
+            required
+            minlength="10"
+            ></textarea>
+            <!-- Checkbox Field -->
+             <input
+             type="checkbox"
+             id="agreeTerms"
+             name="agreeTerms"
+             required
+             >
+             <label for="agreeTerms">I agree to the privacy policy</label>
+             <!--Submit Button-->
+             <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+            <!--Contact details-->
+            <div id="contact-details">
+                <h2>Reach out</h2>
+                <article>
+                    <h3>Head Office</h3>
+                    <address>Gaborone, Botswana</address>
+                </article>
+                <hr>
+                <article>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:infochoppies.co.bw">info@choppies.co.bw</a></p>
+                </article>
+                <hr>
+                <article>
+                    <h3>Call us</h3>
+                    <p><a href="tel:+2670000000">+267 000 0000</a></p>
+                </article>
+                <hr>
+                <article>
+                    <h3> Office Hours</h3>
+                    <p> Monday to Friday: 08:00 to 17:00</p>
+                </article>
+            </div>
+       </section>
+    </main>
+         <!-- FOOTER -->
+        <footer>
+    <div>
+        <h4>CHOPPIES</h4>
+        <p>Botswana's favourite Supermarket Chain</p>
+    </div>
+    <div>
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products &amp; Specials</a></li>
+            <li><a href="stores.html">Store Locations</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div>
+        <h4> Contact Us</h4>
+        <p>Gaborone, Botswana</p>
+        <p>info@Choppies.co.bw</p>
+        <p>+267 000 0000</p>
+    </div>
+    <p>&copy; 2026 Choppies Enterprises Limited. All rights reseeved</p>
+ </footer>
 </body>
 </html>
